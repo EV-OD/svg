@@ -1,5 +1,5 @@
 .box {
-  height: calc(100vh - 50px - 30px);
+  height: calc(100vh - 50px - 50px);
   position: absolute;
   top: 50px;
 }
@@ -7,7 +7,13 @@
   height: 100%;
 }
 .input_area {
-  border: 1px solid red;
+  position: absolute;
+  top: 100%;
+  background-color: rgb(59, 190, 255);
+  padding-block: 5px;
+}
+input {
+  box-shadow: 0 0 0 2pt rgba(100, 100, 200, 0.5);
 }
 
 .user {
