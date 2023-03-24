@@ -1,6 +1,6 @@
 .box {
-  height: calc(100vh - 50px - 50px);
   position: absolute;
+  bottom: 50px;
   top: 50px;
 }
 .msg_area {
