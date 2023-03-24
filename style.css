@@ -8,7 +8,7 @@
 }
 .input_area {
   position: absolute;
-  top: 100%;
+  bottom: 0;
   background-color: rgb(59, 190, 255);
   padding-block: 5px;
 }
