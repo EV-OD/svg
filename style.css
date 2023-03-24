@@ -1,0 +1,22 @@
+.box {
+  height: calc(100vh - 50px - 1px);
+  position: absolute;
+  top: 50px;
+}
+.msg_area {
+  height: 100%;
+}
+.input_area {
+  border: 1px solid red;
+}
+
+.user {
+  top: -20px;
+}
+
+.typing > .user {
+  top: 6px;
+}
+.typing > span {
+  display: inline-block;
+}

@@ -5,35 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="style.css" />
     <script type="module"></script>
     <script src="tailwind.js"></script>
     <script defer type="module" src="code.js"></script>
   </head>
-  <body class="flex justify-center items-center min-h-screen">
-    <div
-      class="box rounded bg-slate-400 flex h-[600px] flex-col w-full max-w-[600px]"
-    >
-      <div class="title text-center text-xl py-2">Messaging App</div>
-      <div
-        class="msg_area overflow-y-auto gap-4 h-full border-2 flex flex-col p-4"
-      ></div>
-      <div class="input_area flex items-center w-full">
-        <div class="avatar mx-5">
-          <img src="/eyeup.svg" alt="girl avatar" width="60" height="60" />
-        </div>
-        <div class="input_box_area w-full mx-5 flex">
-          <input type="text" class="msg_input w-full h-8 rounded-sm" />
-          <div class="actions ml-2">
-            <button
-              class="w-8 h-8 text-2xl bg-slate-300 rounded-full flex justify-center items-center"
-              onclick="handleClick()"
-            >
-              +
-            </button>
+  <body class="h-screen flex flex-col overflow-hidden">
+    <nav class="bg-slate-300 px-2 py-3 flex">
+      <h1>ChatJs</h1>
+      <div class="userdetail ml-auto pr-5"></div>
+    </nav>
+    <main class="h-full flex flex-col justify-center items-center">
+      <div class="box rounded bg-slate-400 flex flex-col w-full max-w-[600px]">
+        <div
+          class="msg_area overflow-y-auto gap-4 first-line:border-2 flex flex-col p-4"
+        ></div>
+        <div class="input_area flex items-center w-full">
+          <div class="avatar w-10 mx-5 relative">
+            <img
+              class="user absolute w-10 h-10"
+              src="/eyeup.svg"
+              alt="girl avatar"
+              width="60"
+              height="60"
+            />
+            <span class="hidden relative -top-3 text-xs">Typing </span>
+          </div>
+          <div
+            class="input_box_area items-center justify-center w-full mx-5 flex"
+          >
+            <input
+              type="text"
+              onkeypress="onKeyPressed(event)"
+              class="msg_input w-full h-8 rounded-sm"
+            />
+            <div class="actions ml-2">
+              <button
+                class="w-8 h-8 text-2xl bg-slate-300 rounded-full flex justify-center items-center"
+                onclick="handleClick()"
+              >
+                +
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>
